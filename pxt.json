@@ -1,0 +1,17 @@
+{
+    "name": "Servo_Driver",
+    "version": "0.1",
+    "description": "Extension for makergenix Servo Driver",
+    "license": "GNU",
+    "dependencies": {
+        "core": "*"
+    },
+    "files": [
+        "README.md",
+        "servo_driver.ts"
+    ],
+    "testFiles": [
+        "test.ts"
+    ],
+    "public": true
+}
