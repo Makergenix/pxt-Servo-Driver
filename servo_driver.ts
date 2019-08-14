@@ -38,8 +38,6 @@ namespace Servo {
 
     let initialized = false
 
-    
-
     function i2cwrite(addr: number, reg: number, value: number) {
         let buf = pins.createBuffer(2)
         buf[0] = reg
@@ -126,3 +124,4 @@ namespace Servo {
         setPwm(channel, 0, value);
     }
 }
+
