@@ -24,6 +24,11 @@ enum channels {
         Channel_15 = 15
 }
 
+enum OnOff {
+    Off = 0,
+    On = 1
+}
+
 /**
  * Custom Blocks
  */
@@ -37,6 +42,8 @@ namespace Servo {
     const LED0_ON_H = 0x07
 
     let initialized = false
+
+    
 
     function i2cwrite(addr: number, reg: number, value: number) {
         let buf = pins.createBuffer(2)
@@ -95,13 +102,13 @@ namespace Servo {
 	 * @param degree [0-180] degree of servo; eg: 90, 0, 180
 	*/
 
-    //% blockId=Servo_Degree weight=90 blockGap=20
+    //% blockId=Servo_Degree weight=80 blockGap=20
     //% block="Rotate servo at Channel %channel | to %degree | degrees"
     //% degree.min=0 degree.max=180
     export function Servo(channel: channels, degree: number): void {
-		// if (!initialized) {
-        //    initPCA9685();
-        //  }
+		if (!initialized) {
+            initPCA9685();
+        }
 		// 50hz: 20,000 us
         let v_us = (degree * 1800 / 180 + 600); // 0.6 ~ 2.4
         let value = v_us * 4096 / 20000;
@@ -113,15 +120,32 @@ namespace Servo {
 	 * @param pulse [500-2500] pulse of servo; eg: 1500, 500, 2500
 	*/
     //% blockId=setServoPulse block="%channel | at pulse %pulse"
-    //% weight=85
+    //% weight=90
     //% pulse.min=500 pulse.max=2500
     export function ServoPulse(channel: channels, pulse: number): void {
-		// if (!initialized) {
-        //    initPCA9685();
-        //  }
+		if (!initialized) {
+            initPCA9685();
+        }
 		// 50hz: 20,000 us
         let value = pulse * 4096 / 20000;
         setPwm(channel, 0, value);
     }
-}
 
+    /**
+     * LED on or off.
+     * @param state boolen 0 or 1;
+     */
+
+    //% blockId=Leds weight=100 blockGap=30
+    //% block="LED at %channel | %state"
+    export function LED(channel: channels, state: OnOff): void {
+        if (!initialized) {
+            initPCA9685();
+        }
+        if (OnOff) {
+            setPwm(0, 0, 2500);
+        } else {
+            setPwm(0, 0, 0);
+        }
+    }
+}
