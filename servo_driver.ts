@@ -6,11 +6,11 @@
 */
 
 enum channels {
-        '0' = 0,
-        '1' = 1,
-        C = 2,
-        D = 3,
-        E = 4,
+        Channel_0 = 0,
+        Channel_1 = 1,
+        Channel_2 = 2,
+        Channel_3 = 3,
+        Channel_4 = 4,
         Channel_5 = 5,
         Channel_6 = 6,
         Channel_7 = 7,
@@ -23,7 +23,6 @@ enum channels {
         Channel_14 = 14,
         Channel_15 = 15
 }
-
 
 /**
  * Custom Blocks
@@ -115,7 +114,7 @@ namespace Servo {
 	 * Servo Execute
 	 * @param pulse [500-2500] pulse of servo; eg: 1500, 500, 2500
 	*/
-    //% blockId=setServoPulse block="Rotate servo at %channel | with %pulse | pulse duration"
+    //% blockId=setServoPulse block="%channel | at %pulse | pulse duration"
     //% weight=85
     //% pulse.min=500 pulse.max=2500
     export function ServoPulse(channel: channels, pulse: number): void {
