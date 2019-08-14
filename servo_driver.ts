@@ -114,7 +114,7 @@ namespace Servo {
 	 * Servo Execute
 	 * @param pulse [500-2500] pulse of servo; eg: 1500, 500, 2500
 	*/
-    //% blockId=setServoPulse block="%channel | at %pulse | pulse duration"
+    //% blockId=setServoPulse block="%channel | at pulse %pulse"
     //% weight=85
     //% pulse.min=500 pulse.max=2500
     export function ServoPulse(channel: channels, pulse: number): void {
@@ -125,4 +125,4 @@ namespace Servo {
         let value = pulse * 4096 / 20000;
         setPwm(channel, 0, value);
     }
-} 
+}
