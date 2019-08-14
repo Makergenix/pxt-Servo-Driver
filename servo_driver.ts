@@ -61,8 +61,8 @@ namespace ServoDriver {
     function initPCA9685(): void {
         i2cwrite(PCA9685_ADDRESS, MODE1, 0x00)
         setFreq(50);
-        setPwm(0, 0, 4095);
-        for (let idx = 1; idx < 16; idx++) {
+        // setPwm(0, 0, 4095);
+        for (let idx = 0; idx < 16; idx++) {
             setPwm(idx, 0, 0);
         }
         initialized = true
