@@ -33,7 +33,7 @@ enum OnOff {
  * Custom Blocks
  */
 //% weight=4 color=#0fbc11 icon="S" block="Servo Driver"
-namespace Servo {
+namespace Servo_Driver {
     const PCA9685_ADDRESS = 0x40
     const MODE1 = 0x00
     const MODE2 = 0x01
