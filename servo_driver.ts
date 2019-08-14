@@ -142,7 +142,7 @@ namespace ServoDriver {
         if (!initialized) {
             initPCA9685();
         }
-        if (OnOff) {
+        if (state) {
             setPwm(channel, 0, 2500);
         } else {
             setPwm(channel, 0, 0);
