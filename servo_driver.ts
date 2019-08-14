@@ -143,9 +143,9 @@ namespace Servo {
             initPCA9685();
         }
         if (OnOff) {
-            setPwm(0, 0, 2500);
+            setPwm(channel, 0, 2500);
         } else {
-            setPwm(0, 0, 0);
+            setPwm(channel, 0, 0);
         }
     }
 }
