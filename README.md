@@ -12,5 +12,5 @@ GNU
 (The metadata above is needed for package search.)
 
 ```package
-Servo=github.com/
+Servo=github.com/Makergenix/pxt-Servo-Driver
 ```

@@ -130,22 +130,4 @@ namespace ServoDriver {
         let value = pulse * 4096 / 20000;
         setPwm(channel, 0, value);
     }
-
-    /**
-     * LED on or off.
-     * @param state boolen 0 or 1;
-     */
-
-    //% blockId=Leds weight=100 blockGap=30
-    //% block="LED at %channel | %state"
-    export function LED(channel: channels, state: OnOff): void {
-        if (!initialized) {
-            initPCA9685();
-        }
-        if (state) {
-            setPwm(channel, 0, 2500);
-        } else {
-            setPwm(channel, 0, 0);
-        }
-    }
 }
