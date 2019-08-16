@@ -1,6 +1,6 @@
 {
     "name": "Servo_Driver",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Extension for makergenix Servo Driver",
     "license": "GNU",
     "dependencies": {
