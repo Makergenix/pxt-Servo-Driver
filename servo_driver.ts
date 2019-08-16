@@ -32,8 +32,8 @@ enum OnOff {
 /**
  * Custom Blocks
  */
-//% weight=4 color=#0fbc11 icon="S" block="Servo Driver"
-namespace ServoDriver {
+//% weight=4 color=#0fbc11 icon="S" block="PCA9685"
+namespace PCA9685 {
     const PCA9685_ADDRESS = 0x40
     const MODE1 = 0x00
     const MODE2 = 0x01
@@ -139,7 +139,7 @@ namespace ServoDriver {
         if (!initialized) {
             initPCA9685();
         }
-        if (state) {
+        if (state==1) {
             setPwm(channel, 0, 2500);
         } else {
             setPwm(channel, 0, 0);

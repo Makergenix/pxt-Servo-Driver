@@ -1,5 +1,5 @@
 {
-    "name": "Servo_Driver",
+    "name": "PCA9685",
     "version": "0.0.3",
     "description": "Extension for makergenix Servo Driver",
     "license": "GNU",
