@@ -1,10 +1,16 @@
 # micro:bit Servo Driver 
 
-Extension for PCA9685 Servo control for Micro:bit
+Extension for PCA9685 Servo control Driver for Micro:bit
 
-## License
+PCA9685 is a 16 pin LED driver IC connected using I2C on PIN 19 & 20 of microbit.
 
-GNU
+## Blocks
+
+This extension includes the following blocks, for controlling servo or LEDs.
+
+* Servo: Rotate Servo motor at given angle.
+* Pulse: Pulse of given duration.
+* LED: block to toggle the LED on or off.
 
 ## Supported targets
 

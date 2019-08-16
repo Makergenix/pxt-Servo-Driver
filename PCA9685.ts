@@ -120,7 +120,7 @@ namespace PCA9685 {
     //% blockId=setServoPulse block="%channel | at pulse %pulse"
     //% weight=90
     //% pulse.min=500 pulse.max=2500
-    export function ServoPulse(channel: channels, pulse: number): void {
+    export function PWMPulse(channel: channels, pulse: number): void {
 		if (!initialized) {
             initPCA9685();
         }
@@ -134,7 +134,7 @@ namespace PCA9685 {
      * @param state boolen 0 or 1;
     */
 
-    //% blockId=Leds weight=100 blockGap=30
+    //% blockId=Led weight=100
     //% block="LED at %channel | %state"
     export function led(channel: channels, state: OnOff): void {
         if (!initialized) {
