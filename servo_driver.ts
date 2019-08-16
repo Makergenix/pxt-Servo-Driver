@@ -25,8 +25,8 @@ enum channels {
 }
 
 enum OnOff {
-    Off = True,
-    On = False
+    Off = 0,
+    On = 1
 }
 
 /**
@@ -42,8 +42,6 @@ namespace ServoDriver {
     const LED0_ON_H = 0x07
 
     let initialized = false
-
-    
 
     function i2cwrite(addr: number, reg: number, value: number) {
         let buf = pins.createBuffer(2)
@@ -129,5 +127,22 @@ namespace ServoDriver {
 		// 50hz: 20,000 us
         let value = pulse * 4096 / 20000;
         setPwm(channel, 0, value);
+    }
+        /**
+     * Turn LED on or off.
+     * @param state boolen 0 or 1;
+     */
+
+    //% blockId=Leds weight=100 blockGap=30
+    //% block="LED at %channel | %state"
+    export function led(channel: channels, state: OnOff): void {
+        if (!initialized) {
+            initPCA9685();
+        }
+        if (state) {
+            setPwm(channel, 0, 2500);
+        } else {
+            setPwm(channel, 0, 0);
+        }
     }
 }
