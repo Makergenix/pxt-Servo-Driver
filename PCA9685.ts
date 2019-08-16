@@ -6,37 +6,37 @@
 */
 
 enum channels {
-        //% block="Ch 0"
+        //% block="Ch0"
         C0 = 0,
-        //% block="Ch 1"
+        //% block="Ch1"
         C1 = 1,
-        //% block="Ch 2"
+        //% block="Ch2"
         C2 = 2,
-        //% block="Ch 3"
+        //% block="Ch3"
         C3 = 3,
-        //% block="Ch 4"
+        //% block="Ch4"
         C4 = 4,
-        //% block="Ch 5"
+        //% block="Ch5"
         C5 = 5,
-        //% block="Ch 6"
+        //% block="Ch6"
         C6 = 6,
-        //% block="Ch 7"
+        //% block="Ch7"
         C7 = 7,
-        //% block="Ch 8"
+        //% block="Ch8"
         C8 = 8,
-        //% block="Ch 9"
+        //% block="Ch9"
         C9 = 9,
-        //% block="Ch 10"
+        //% block="Ch10"
         C10 = 10,
-        //% block="Ch 11"
+        //% block="Ch11"
         C11 = 11,
-        //% block="Ch 12"
+        //% block="Ch12"
         C12 = 12,
-        //% block="Ch 13"
+        //% block="Ch13"
         C13 = 13,
-        //% block="Ch 14"
+        //% block="Ch14"
         C14 = 14,
-        //% block="Ch 15 "
+        //% block="Ch15 "
         C15 = 15
 }
 
