@@ -6,22 +6,38 @@
 */
 
 enum channels {
-        Channel_0 = 0,
-        Channel_1 = 1,
-        Channel_2 = 2,
-        Channel_3 = 3,
-        Channel_4 = 4,
-        Channel_5 = 5,
-        Channel_6 = 6,
-        Channel_7 = 7,
-        Channel_8 = 8,
-        Channel_9 = 9,
-        Channel_10 = 10,
-        Channel_11 = 11,
-        Channel_12 = 12,
-        Channel_13 = 13,
-        Channel_14 = 14,
-        Channel_15 = 15
+        //% block="Ch 0"
+        C0 = 0,
+        //% block="Ch 1"
+        C1 = 1,
+        //% block="Ch 2"
+        C2 = 2,
+        //% block="Ch 3"
+        C3 = 3,
+        //% block="Ch 4"
+        C4 = 4,
+        //% block="Ch 5"
+        C5 = 5,
+        //% block="Ch 6"
+        C6 = 6,
+        //% block="Ch 7"
+        C7 = 7,
+        //% block="Ch 8"
+        C8 = 8,
+        //% block="Ch 9"
+        C9 = 9,
+        //% block="Ch 10"
+        C10 = 10,
+        //% block="Ch 11"
+        C11 = 11,
+        //% block="Ch 12"
+        C12 = 12,
+        //% block="Ch 13"
+        C13 = 13,
+        //% block="Ch 14"
+        C14 = 14,
+        //% block="Ch 15 "
+        C15 = 15
 }
 
 enum OnOff {
@@ -117,7 +133,7 @@ namespace PCA9685 {
 	 * Servo Execute
 	 * @param pulse [500-2500] pulse of servo; eg: 1500, 500, 2500
 	*/
-    //% blockId=setServoPulse block="%channel | at pulse %pulse"
+    //% blockId=setServoPulse block="Set %channel | at pulse %pulse"
     //% weight=90
     //% pulse.min=500 pulse.max=2500
     export function PWMPulse(channel: channels, pulse: number): void {
