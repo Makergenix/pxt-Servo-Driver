@@ -32,7 +32,7 @@ enum OnOff {
 /**
  * Custom Blocks
  */
-//% weight=4 color=#0fbc11 icon="S" block="PCA9685"
+//% weight=4 color=#0fbc11 icon="P" block="PCA9685"
 namespace PCA9685 {
     const PCA9685_ADDRESS = 0x40
     const MODE1 = 0x00
@@ -133,16 +133,16 @@ namespace PCA9685 {
      * @param state boolen 0 or 1;
      */
 
-    //% blockId=Leds weight=100 blockGap=30
-    //% block="LED at %channel | %state"
-    export function led(channel: channels, state: OnOff): void {
-        if (!initialized) {
-            initPCA9685();
-        }
-        if (state==1) {
-            setPwm(channel, 0, 2500);
-        } else {
-            setPwm(channel, 0, 0);
-        }
-    }
+    // //% blockId=Leds weight=100 blockGap=30
+    // //% block="LED at %channel | %state"
+    // export function led(channel: channels, state: OnOff): void {
+    //     if (!initialized) {
+    //         initPCA9685();
+    //     }
+    //     if (state==1) {
+    //         setPwm(channel, 0, 2500);
+    //     } else {
+    //         setPwm(channel, 0, 0);
+    //     }
+    // }
 }
