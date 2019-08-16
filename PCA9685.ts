@@ -60,8 +60,8 @@ namespace PCA9685 {
         i2cwrite(PCA9685_ADDRESS, MODE1, 0x00)
         setFreq(50);
         // setPwm(0, 0, 4095);
-        for (let idx = 0; idx < 16; idx++) {
-            setPwm(idx, 0, 0);
+        for (let ch = 0; ch < 16; ch++) {
+            setPwm(ch, 0, 0);
         }
         initialized = true
     }
